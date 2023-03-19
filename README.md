@@ -19,5 +19,5 @@ Intell-Health not only provides patients with a better understanding of their he
 
 ## Feedback
 
-If you have any feedback, please reach out to us at architshukla546@gmail.com
+If you have any feedback, please reach out to us at architshukla546@gmail.com .
 
