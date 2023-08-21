@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./icon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Disease Risk Factor Analysis</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Audiowide", sans-serif;
+      }
+      .main {
+        height: 100vh;
+        background-color: #e9eaff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-image: url("https://cdn.shopify.com/s/files/1/0038/5417/2275/files/progesterone-suppositories-bottle.jpg?v=1656525309");
+        background-repeat: no-repeat;
+        background-size: cover; */
+      }
+      .navbar {
+        background: #1976d2;
+        backdrop-filter: blur(3px);
+        box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 98.69%;
+        height: 5vh;
+        /* margin-bottom: 500px; */
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        color: white;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      a {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      a:hover {
+        color: #ffc0c0;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        margin: 0 auto;
+        margin-top: 90vh;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      label {
+        margin-bottom: 10px;
+      }
+
+      input,
+      select {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #2196f3;
+        color: white;
+        cursor: pointer;
+        margin-top: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      button:hover {
+        background-color: #0d8be0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="http://localhost:3000/">Home</a></li>
+        <li><a href="http://localhost:3000/services">Services</a></li>
+        <li><a href="http://localhost:3000/about">About</a></li>
+        <li><a href="http://localhost:3000/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <form action="{{ url_for('cardiac') }}" method="POST" id="my-form">
+        <!-- <form action="/cardiac" method="POST" id="my-form"> -->
+        <label for="age">Age:</label>
+        <input type="text" step="any" id="age" name="age" required />
+
+        <label for="sex">Gender: (male:1 | female:0):</label>
+        <input
+          type="text"
+          step="any"
+          id="sex"
+          name="sex"
+          step="0.01"
+          required
+        />
+
+        <label for="cp"
+          >Chest Pain <br />[TA: Typical Angina, ATA: Atypical Angina, NAP:
+          Non-Anginal Pain, ASY: Asymptomatic]:</label
+        >
+        <input type="text" step="any" id="cp" name="cp" step="0.01" required />
+
+        <label for="trtbps">Resting BP:</label>
+        <input type="text" step="any" id="trtbps" name="trtbps" required />
+
+        <label for="chol">Cholesterol:</label>
+        <input type="text" id="chol" name="chol" required />
+
+        <label for="fbs">Fasting Blood Sugar:</label>
+        <input type="text" step="any" id="fbs" name="fbs" required />
+
+        <label for="restecg">Resting ECG (electrocardiogram):</label>
+        <input
+          type="text"
+          step="any"
+          id="restecg"
+          name="restecg"
+          step="0.01"
+          required
+        />
+
+        <label for="thalachh">Maximum Heart Rate:</label>
+        <input type="text" step="any" id="thalachh" name="thalachh" required />
+
+        <label for="exng">Exercise Angina: </label>
+        <input type="text" step="any" id="exng" name="exng" required />
+
+        <label for="oldpeak">Old peak [ST]:</label>
+        <input type="text" step="any" id="oldpeak" name="oldpeak" required />
+
+        <label for="slp">ST_Slope [Up:0 | Flat:1 | Down:2]:</label>
+        <input type="text" id="slp" name="slp" required />
+
+        <label for="caa">Red Blood Cell Count:</label>
+        <input type="text" id="caa" name="caa" step="0.01" required />
+
+        <label for="thall">Hypertension:</label>
+        <input type="text" id="thall" name="thall" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="footer"></div>
+
+    <script></script>
+  </body>
+</html>

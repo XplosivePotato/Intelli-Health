@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="%PUBLIC_URL%/icon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INTELLI-HEALTH</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <style>
+      body{
+        margin: 0;
+        font-family: "Audiowide", sans-serif;
+
+      }
+      .main {
+        height: 100vh;
+        background-color: #E9EAFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-image: url("https://cdn.shopify.com/s/files/1/0038/5417/2275/files/progesterone-suppositories-bottle.jpg?v=1656525309");
+        background-repeat: no-repeat;
+        background-size: cover; */
+      }
+      .navbar {
+        background: #1976D2;
+        backdrop-filter: blur(3px);
+        box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 98.69%;
+        height: 5vh;
+        margin-bottom: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        color: white;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      a {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      a:hover {
+        color: #ffc0c0;
+      }
+
+
+      .card {
+        color: white;
+        background-color: #1976d2;
+        backdrop-filter: blur(5px);
+        height: 45vh;
+        width: 25%;
+        margin: auto;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+      }
+      .my-button {
+  background-color: #5EA4EF; /* Green background color */
+  border: none; /* Remove border */
+  color: white; /* White text color */
+  padding: 10px 25px; /* Add some padding */
+  text-align: center; /* Center text horizontally */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make the button a block element */
+  font-size: 16px; /* Set font size */
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer; /* Add cursor on hover */
+  /* box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.34); */
+  border: 2px solid #5EA4EF;
+}
+
+.my-button:hover {
+  background:transparent; /* Darker green background color on hover */
+  border: 2px solid #5EA4EF;
+}
+
+h2{
+  font-weight: lighter;
+}
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="http://localhost:3000/">Home</a></li>
+        <li><a href="http://localhost:3000/services">Services</a></li>
+        <li><a href="http://localhost:3000/about">About</a></li>
+        <li><a href="http://localhost:3000/contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+        <div class="card-1 card">
+          <h2>Chronic Kidney </h2>
+
+          <form action="/chronic_check" method="POST">
+            <input  class="my-button" type="submit" value="Detect"  />
+          </form>
+        </div>
+
+        <div class="card-2 card">
+          <h2>Diabetes Detection</h2>
+
+          <form action="/sugar_check" method="POST">
+            <input class="my-button" type="submit" value="Detect"/>
+          </form>
+        </div>
+
+        <div class="card-3 card">
+          <h2>Heart-Failure Detect</h2>
+
+          <form action="/cardiac_check" method="POST">
+            <input class="my-button" type="submit"value="Detect" />
+          </form>
+          <div class="footer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

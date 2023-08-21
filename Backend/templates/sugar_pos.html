@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./icon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diabetes</title>
+    <style>
+     body {
+        margin: 0;
+        font-family: "Audiowide", sans-serif;
+      }
+      .main {
+        height: 100vh;
+        background-color: #e9eaff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-image: url("https://cdn.shopify.com/s/files/1/0038/5417/2275/files/progesterone-suppositories-bottle.jpg?v=1656525309");
+        background-repeat: no-repeat;
+        background-size: cover; */
+      }
+      .navbar {
+        background: #1976D2;
+        backdrop-filter: blur(3px);
+        box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 98.69%;
+        height: 5vh;
+        margin-bottom: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        color: white;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      a {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      a:hover {
+        color: #ffc0c0;
+      }
+
+      .diagnostics {
+        margin-top: 15vh;
+        height: 85vh;
+        width: 70%;
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        align-items: center;
+        color: aliceblue;
+        font-size: 18px;
+        border-radius: 20px;
+        padding: 20px;
+      }
+      .diagnostics h2 {
+        color: rgb(255, 127, 80);
+        text-decoration: none;
+      }
+      .diagnostics ul li {
+        text-align: justify;
+      }
+
+      h2 a {
+        color: aqua;
+        transition: 0.5s;
+        text-decoration: none;
+      }
+
+      h2 a:hover {
+        color: aqua;
+        font-size: larger;
+      }
+
+      .treatments {
+        background-color: cornflowerblue;
+        text-align: justify;
+        padding: 12px 40px;
+        margin: 10px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="http://localhost:3000/">Home</a></li>
+        <li><a href="http://localhost:3000/services">Services</a></li>
+        <li><a href="http://localhost:3000/about">About</a></li>
+        <li><a href="http://localhost:3000/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="diagnostics">
+        <h2>{{txt}}</h2>
+        <div class="treatments">
+          <h3>Further Tests to perform:</h3>
+          <ul>
+            <li>- A1C test -  blood test </li>
+            <br />
+            <li>- Random blood sugar test - sugar level of 200 milligrams per deciliter (mg/dL) 11.1 millimoles per liter (mmol/L) or higher suggests diabetes
+            </li>
+            <li>- Fasting blood sugar test - level less than 100 mg/dL (5.6 mmol/L) is normal. A fasting blood sugar level from 100 to 125 mg/dL (5.6 to 6.9 mmol/L) is considered prediabetes. If it's 126 mg/dL (7 mmol/L) or higher on two separate tests, you have diabetes.
+            </li>
+            <li>
+
+            </li>
+          </ul>
+        </div>
+
+        <div class="treatments">
+          <h3>Prevention:</h3>
+          <br>
+            <li>- Lose extra weight</li><br>
+            <li>- Be more physically active</li><br >
+            <li>- Eat healthy plant foods</li><br>
+            <li>- Eat healthy fats</li><br>
+            <li>- Skip fad diets and make healthier choices</li><br>
+            <li>- Eat healthy fats</li><br>
+          </ul>
+        </div>
+        <h2>
+          <a href="https://diabetes.org/diabetes/a1c/diagnosis">
+            For more details click here 🔗
+          </a>
+        </h2>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </body>
+</html>
