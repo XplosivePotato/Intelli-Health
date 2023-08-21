@@ -1,0 +1,22 @@
+.home {
+  background-color: rgb(255, 208, 146);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.submit {
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  /* background-color: blue; */
+  /* padding: 10px; */
+}
+
+.btn-style {
+  border-radius: 50px;
+}
